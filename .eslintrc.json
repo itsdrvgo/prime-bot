@@ -1,0 +1,92 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint",
+        "eslint-plugin-import"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1,
+                "MemberExpression": 1
+            }
+        ],
+        "no-unused-vars": [
+            "off",
+            "always"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "curly": [
+            "error",
+            "multi-line"
+        ],
+        "eqeqeq": [
+            "error",
+            "always"
+        ],
+        "camelcase": [
+            "error",
+            {}
+        ],
+        "comma-spacing": [
+            "error",
+            {
+                "before": false,
+                "after": true
+            }
+        ],
+        "keyword-spacing": [
+            "error",
+            {
+                "before": true,
+                "after": true
+            }
+        ],
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ],
+        "arrow-parens": [
+            "error",
+            "always"
+        ],
+        "@typescript-eslint/no-empty-function": [
+            "off",
+            "always"
+        ],
+        "import/extensions": [
+            "error",
+            "always"
+        ],
+        "no-trailing-spaces": [
+            "error",
+            {}
+        ],
+        "no-multi-spaces": [
+            "error",
+            {}
+        ],
+        "semi-spacing": [
+            "error",
+            {
+                "before": false,
+                "after": true
+            }
+        ]
+    }
+}

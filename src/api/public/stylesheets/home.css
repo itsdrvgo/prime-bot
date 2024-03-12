@@ -1,0 +1,402 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    perspective: 10px;
+    scroll-behavior: smooth;
+}
+
+.wrapper .parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+#background {
+    transform: translateZ(-10px) scale(2);
+}
+
+#foreground {
+    transform: translateZ(-5px) scale(1.5);
+}
+
+#background,
+#foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.wrapper .main {
+    font-size: 1.2em;
+    padding: 3em;
+    background: var(--bg-color);
+    color: #fff;
+}
+
+.wrapper .main .about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 0 100px;
+}
+
+.wrapper .main .about h1 {
+    font-size: 2em;
+    margin: 1.5em;
+}
+
+.wrapper .main .about .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.wrapper .main .about .cards .card {
+    position: relative;
+    width: 400px;
+    height: 550px;
+    background: rgb(36, 32, 32);
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin: 40px;
+}
+
+.wrapper .main .about .cards .card .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper .main .about .cards .card .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: 0.6s ease-in-out;
+}
+
+.wrapper .main .about .cards .card:hover .imgBx img {
+    opacity: 0;
+}
+
+.wrapper .main .about .cards .card .content {
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    width: 80%;
+    height: 60px;
+    background: var(--sec-color);
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.wrapper .main .about .cards .card:hover .content {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.wrapper .main .about .cards .card .content h3 {
+    margin: 0 10px;
+    padding: 0;
+    font-size: 20px;
+    transition: 0.6s ease;
+}
+
+.wrapper .main .about .cards .card .content p {
+    margin: 10px 10px 0;
+    padding: 0;
+    opacity: 0;
+    line-height: 1.2em;
+    text-align: left;
+    font-size: 17px;
+    transition: 0.2s ease;
+    transition-delay: 0.5s;
+}
+
+.wrapper .main .about .cards .card:hover .content h3 {
+    font-size: 40px;
+}
+
+.wrapper .main .about .cards .card:hover .content p {
+    opacity: 1;
+}
+
+.wrapper .main .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 0 100px;
+}
+
+.wrapper .main .social h1 {
+    font-size: 2em;
+    margin: 1.5em;
+}
+
+.wrapper .main .social .divBx {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.wrapper .main .social .divBx ul {
+    padding: 0 30px;
+    list-style: none;
+    flex-basis: 50%;
+}
+
+.wrapper .main .social .divBx ul li {
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper .main .social .divBx ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    background: var(--tert-color);
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px 100px;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+.wrapper .main .social .divBx ul li a h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .main .social .divBx ul li a h4 i {
+    margin-right: 5px;
+    font-size: 1.2em;
+    font-weight: 50;
+}
+
+.wrapper .main .social .divBx ul li a p {
+    font-size: 0em;
+    opacity: 0.6;
+    transition: 0.2s ease-in-out;
+}
+
+.wrapper .main .social .divBx ul li a.twitter:hover {
+    background: #1DA1F2;
+}
+
+.wrapper .main .social .divBx ul li a.youtube:hover {
+    background: #FF0000;
+}
+
+.wrapper .main .social .divBx ul li a.instagram:hover {
+    background: linear-gradient(to top right, #feda75, #fa7e1e 20%, #d62976, #962fbf, #4f5bd5);
+}
+
+.wrapper .main .social .divBx ul li a.discord:hover {
+    background: #7289DA;
+}
+
+.wrapper .main .social .divBx ul li a.github:hover {
+    background: #333;
+}
+
+
+.wrapper .main .social .divBx ul li a:hover p {
+    font-size: 0.6em;
+}
+
+.wrapper .main .social .divBx .imgBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+}
+
+.wrapper .main .social .divBx .imgBx img {
+    width: 60%;
+    height: 60%;
+    animation: float 3s ease-in-out infinite;
+}
+
+.wrapper .main .videos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 0 100px;
+}
+
+.wrapper .main .videos h1 {
+    font-size: 2em;
+    margin: 1.5em;
+}
+
+.wrapper .main .videos .divBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 3em 1em;
+}
+
+.wrapper .main .videos .divBx .frame {
+    padding: 0.4em;
+    background: #0000004b;
+    border-radius: 10px;
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+
+}
+
+@media (max-width: 1280px) {
+
+    .wrapper .main .about .cards {
+        flex-wrap: nowrap;
+    }
+
+    .wrapper .main .about .cards .card {
+        transform: scale(0.8);
+        margin: 5px;
+    }
+
+    .wrapper .main .social .divBx .imgBx img {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+@media (max-width: 1090px) {
+
+    #background {
+        transform: translateZ(-10px) scale(2);
+        position: absolute;
+        height: 200%;
+        width: 200%;
+        object-fit: cover;
+        z-index: -1;
+    }
+    
+    #foreground {
+        transform: translateZ(-5px) scale(1.5);
+        position: absolute;
+        height: 150%;
+        width: 150%;
+        object-fit: contain;
+        z-index: -1;
+    }
+
+    .wrapper .main {
+        padding: 1em 2em;
+    }
+
+    .wrapper .main .about .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .wrapper .main .about .cards .card {
+        transform: scale(0.8);
+        margin: 5px 15px;
+    }
+
+    .wrapper .main .social .divBx  {
+        flex-direction: column;
+    }
+
+    .wrapper .main .social .divBx ul {
+        margin: 20px 0 40px;
+    }
+
+    .wrapper .main .social .divBx ul li {
+        margin: 20px 0;
+    }
+
+    .wrapper .main .social .divBx ul li a {
+        width: 250px;
+        padding: 8px 90px;
+    }
+    
+    .wrapper .main .social .divBx .imgBx img {
+        width: 85%;
+        height: 85%;
+    }
+
+    .wrapper .main .videos h1 {
+        font-size: 2em;
+        margin: 0.8em;
+    }
+
+    .wrapper .main .videos .divBx {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        margin: 0.5em 0.5em;
+        padding: 0;
+    }
+    
+    .wrapper .main .videos .divBx .frame {
+        transform: scale(0.5);
+        padding: 0.4em;
+        background: #0000004b;
+        border-radius: 10px;
+    }
+
+}

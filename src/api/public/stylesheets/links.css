@@ -1,0 +1,211 @@
+:root {
+    --bg-color: rgb(32, 29, 29);
+    --text-color: #fff;
+    --main-color: #5452df;
+    --sec-color: #301d49;
+    --tert-color: #4e2d79;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    height: 100vh;
+    overflow: auto;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 20px 8%;
+    z-index: 1000;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.7em;
+    font-weight: 600;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    background: rgb(75, 49, 170);
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.buttons a:hover {
+    background: rgb(52, 32, 126);
+}
+
+.buttons a i {
+    margin-right: 5px;
+}
+
+.image {
+    background-image: url(https://cdn.discordapp.com/attachments/1091399104480944158/1091403177754099812/pexels-pixabay-268533.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0.6);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .logo {
+    margin: 20px;
+}
+
+.container .logo img {
+    width: 400px;
+    height: 400px;
+}
+
+.container .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+}
+
+.container .links a {
+    background: linear-gradient(45deg, #A10100, #DA1F05, #F33C04, #FE650D);
+    background-size: 500%;
+    background-position: left;
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 60%;
+    margin: 10px;
+    transition: 0.2s ease;
+    box-shadow: 2px 3px 5px rgb(44, 31, 31);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.container .links a i {
+    margin: 5px;
+}
+
+.container .links a.first {
+    animation: changeBg 4s 1.5s ease-in-out infinite alternate;
+}
+
+.container .links a.second {
+    animation: changeBg 5s ease-in-out infinite alternate;
+}
+
+.container .links a.third {
+    animation: changeBg 7s 1s ease-in-out infinite alternate;
+}
+
+.container .links a.forth {
+    animation: changeBg 6s 0.5s ease-in-out infinite alternate;
+}
+
+.container .links a:hover {
+    transform: scale(1.02);
+}
+
+@keyframes changeBg {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
+@media (max-width: 1280px) {
+    header {
+        padding: 14px 2%;
+        transition: 0.2s;
+    }
+
+    .container .logo img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .container .links a {
+        padding: 15px;
+        border-radius: 10px;
+        min-width: 80%;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 1090px) {
+    header {
+        padding: 16px;
+        transition: 0.2s;
+    }
+
+    header .logo {
+        font-size: 1.5em;
+    }
+
+    .buttons a {
+        font-size: 0.8em;
+    }
+
+    .container .logo img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .container .links a {
+        padding: 10px;
+        border-radius: 5px;
+        min-width: 80%;
+        margin: 10px;
+    }
+}

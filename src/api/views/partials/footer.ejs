@@ -1,0 +1,179 @@
+<footer>
+    <div class="container">
+        <div class="left">
+            <h1>DRAGOLUCA</h1>
+            <ul>
+                <li>
+                    <a href="https://twitter.com/itsdrvgo"><i class="ri-twitter-line"></i></a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/@dragoluca"><i class="ri-youtube-line"></i></a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/itsdrvgo"><i class="ri-instagram-line"></i></a>
+                </li>
+                <li>
+                    <a href="https://dsc.gg/itsdrvgo"><i class="ri-discord-line"></i></a>
+                </li>
+                <li>
+                    <a href="https://github.com/dragoluca22"><i class="ri-github-line"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <p>© 2022 DRAGOLUCA. ALL RIGHTS RESERVED.</p>
+            <a href="https://github.com/dragoluca22">BUILT BY DRAGOLUCA</a>
+        </div>
+    </div>
+</footer>
+</div>
+
+<style scoped>
+    footer {
+        background: var(--sec-color);
+        padding: 100px 150px;
+    }
+
+    footer .container {
+        padding: 50px 150px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        cursor: default;
+    }
+
+    footer .container .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    footer .container .left h1 {
+        font-family: 'Unbounded', cursive;
+        font-size: 4em;
+    }
+
+    footer .container .left ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        list-style: none;
+    }
+
+    footer .container .left ul li a {
+        color: var(--text-color);
+        font-size: 1.3em;
+        text-decoration: none;
+        margin: 0 5px;
+    }
+
+    footer .container .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    footer .container .right p {
+        font-family: 'Barlow', sans-serif;
+        margin-bottom: 2px;
+    }
+
+    footer .container .right a {
+        font-family: 'Barlow', sans-serif;
+        color: var(--text-color);
+        text-decoration: none;
+        margin-top: 2px;
+    }
+
+    footer .container .right a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 1280px) {
+        footer {
+            padding: 50px 100px;
+        }
+
+        footer .container {
+            padding: 25px 75px;
+        }
+
+        footer .container .left h1 {
+            font-size: 2em;
+        }
+
+        footer .container .left ul li a {
+            font-size: 1em;
+        }
+
+        footer .container .right p {
+            font-size: 0.8em;
+            margin-bottom: 2px;
+        }
+
+        footer .container .right a {
+            font-size: 0.8em;
+            margin-top: 2px;
+        }
+    }
+
+    @media (max-width: 1090px) {
+        footer {
+            padding: 25px 25px;
+        }
+
+        footer .container {
+            padding: 25px 0;
+        }
+
+        footer .container .left h1 {
+            font-size: 1.05em;
+        }
+
+        footer .container .left ul li a {
+            font-size: 0.8em;
+        }
+
+        footer .container .right p {
+            font-size: 0.4em;
+            margin-bottom: 2px;
+        }
+
+        footer .container .right a {
+            font-size: 0.4em;
+            margin-top: 2px;
+        }
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+        background-color: var(--bg-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 5px;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: var(--sec-color);
+        transition: 0.8s all ease-in-out;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: var(--tert-color);
+    }
+</style>
+
+<script src="/scripts/navbarBackground.js"></script>
+<script src="/scripts/parallaxBlur.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.2.min.js"
+    integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
+</body>
+
+</html>
